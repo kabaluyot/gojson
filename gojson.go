@@ -14,10 +14,10 @@ import (
 	"fmt"
 )
 
-//OrderedMap type for ordered Json conversion
+// OrderedMap type for ordered Json conversion
 type OrderedMap map[string]interface{}
 
-//ToJSON converts an OrderedMap type to Json string
+// ToJSON converts an OrderedMap type to Json string
 func (om OrderedMap) ToJSON(order ...string) string {
 	//check if no order param given
 	if order == nil {

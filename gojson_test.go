@@ -5,6 +5,8 @@ import (
 	"testing"
 )
 
+// Setting the om.ToJSON with the ordered keys will preserve its string encoded equivalent.
+// Setting it to empty like om.toJSON() will randomly set its order just like the default map[string]interface to encoded equivalent.
 func TestOrderedMap(t *testing.T) {
 	om := OrderedMap{
 		"name": "karl",

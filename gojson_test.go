@@ -23,6 +23,6 @@ func BenchmarkOrderedMap(t *testing.B) {
 		"age":  21,
 	}
 
-	res := om.ToJSON("age")
+	res := om.ToJSON()
 	fmt.Println(res)
 }

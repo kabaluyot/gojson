@@ -1,5 +1,5 @@
 /*
-	Custom JSON parser using orderedmap
+	Custom JSON encode by specifying and preserving map keys.
 
 	@author: Karl Anthony Baluyot
 	License: MIT
@@ -14,12 +14,12 @@ import (
 	"fmt"
 )
 
-// OrderedMap type for ordered Json conversion
+// OrderedMap type for ordered JSON encode conversion
 type OrderedMap map[string]interface{}
 
 // ToJSON converts an OrderedMap type to Json string
 func (om OrderedMap) ToJSON(order ...string) string {
-	//check if no order param given
+	// check if no order param given
 	if order == nil {
 		for key := range om {
 			order = append(order, key)
